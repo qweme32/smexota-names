@@ -1,4 +1,4 @@
-const words = [
+[
     [
         "солевой",
         "героиновый",
@@ -85,45 +85,4 @@ const words = [
         ":-)",
         ""
     ]
-];
-
-function smex_translit(word){
-	var answer = '';
-	var converter = {
-		'а': 'A',    'б': '6',    'в': 'B',    'г': 'r',    'д': 'D',
-		'е': 'E',    'ё': 'e',    'ж': 'J-I-I',   'з': '3',    'и': 'u',
-		'й': 'u',    'к': 'K',    'л': 'Jl',    'м': 'M',    'н': 'H',
-		'о': 'o',    'п': 'n',    'р': 'P',    'с': 'C',    'т': 'T',
-		'у': 'y',    'ф': '0l0',    'х': 'X',    'ц': 'c',    'ч': '4',
-		'ш': 'w',   'щ': 'w',  'ь': '',     'ы': 'bl',    'ъ': '',
-		'э': '3',    'ю': 'I-O',   'я': 'ya',
-	};
- 
-	for (var i = 0; i < word.length; ++i ) {
-		if (converter[word[i]] == undefined){
-			answer += word[i];
-		} else {
-			answer += converter[word[i]];
-		}
-	}
- 
-	return answer;
-}
-
-function randomify(arr) {
-    return arr[Math.floor(arr.length * Math.random())];
-}
-
-function smexota(include_additional = false) {
-    let smex = "";
-
-    smex += randomify(words[0]);
-    smex += " " + randomify(words[1]);
-
-    if (include_additional) {
-        smex += " " + randomify(words[2]);
-    }
-
-    return smex;
-}
-
+]

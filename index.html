@@ -36,6 +36,10 @@
                 <input type="checkbox" id="a3">
                 <label for="a3">Добавить еще крутяк</label>
             </div>
+            <div style="margin-bottom: 10px;">
+                <input type="checkbox" id="a5">
+                <label for="a5">Я епта из англии</label>
+            </div>
             <input type="text" style="width: 200px" id="uiqwe" value="123">
             
             <div style="margin-top: 10px;">
@@ -48,22 +52,37 @@
     <script>
         const body = document.querySelector("body");
         const prikol = document.querySelector("#a4");
+        const trs = document.querySelector("#a5");
+        const lol2 = document.querySelector("#a3");
+        let orig = "";
+
         function lol() {
             
 
-            body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
-
-            let time = 300;
-
             if (prikol.checked) {
-                time = 10;
+                body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
             }
 
-            setTimeout(lol, time);
+            setTimeout(lol, 50);
         }
 
         document.querySelector("#smex").addEventListener("click", () => {
-            document.querySelector("#uiqwe").value = smexota(document.querySelector("#a3").checked);
+            let val = smexota(lol2.checked);
+            orig = val;
+
+            if (trs.checked) {
+                val = smex_translit(val)
+            }
+
+            document.querySelector("#uiqwe").value = val;
+        })
+
+        document.querySelector("#a5").addEventListener("change", () => {
+            if (trs.checked) { 
+                document.querySelector("#uiqwe").value = smex_translit(document.querySelector("#uiqwe").value)
+            } else {
+                document.querySelector("#uiqwe").value = orig;
+            }
         })
 
         document.querySelector("#smex").click()
