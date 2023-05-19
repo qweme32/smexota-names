@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XD</title>
+
+    <style>
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
+        }
+        .lol {
+            transform: scale(2.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="lol">
+            <div style="margin-bottom: 10px;">
+                <input type="checkbox" id="a4" checked>
+                <label for="a4">Прикол</label>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <input type="checkbox" id="a3">
+                <label for="a3">Добавить еще крутяк</label>
+            </div>
+            <input type="text" style="width: 200px" id="uiqwe" value="123">
+            
+            <div style="margin-top: 10px;">
+                <button id="smex">Крутяк</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="smexota.js"></script>
+    <script>
+        const body = document.querySelector("body");
+        const prikol = document.querySelector("#a4");
+        function lol() {
+            
+
+            body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+            let time = 300;
+
+            if (prikol.checked) {
+                time = 10;
+            }
+
+            setTimeout(lol, time);
+        }
+
+        document.querySelector("#smex").addEventListener("click", () => {
+            document.querySelector("#uiqwe").value = smexota(document.querySelector("#a3").checked);
+        })
+
+        document.querySelector("#smex").click()
+
+        lol();
+    </script>
+</body>
+</html>
