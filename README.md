@@ -6,7 +6,8 @@ https://qweme32.github.io/smexota-names
 ### Add to your website
 1. Include this string in html  
     ```html
-    <script src="https://cdn.jsdelivr.net/gh/qweme32/smexota-names@main/smexota.js"></script>```
+    <script src="https://cdn.jsdelivr.net/gh/qweme32/smexota-names@main/smexota.js"></script>
+    ```
 2. Use
     ```html
     <script>
