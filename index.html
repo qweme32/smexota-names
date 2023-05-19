@@ -7,6 +7,9 @@
     <title>XD</title>
 
     <style>
+        body {
+            background: yellow;
+        }
         .content{
             display: flex;
             justify-content: center;
@@ -29,8 +32,8 @@
     <div class="content">
         <div class="lol">
             <div style="margin-bottom: 10px;">
-                <input type="checkbox" id="a4" checked>
-                <label for="a4">Прикол</label>
+                <input type="checkbox" id="a4">
+                <label for="a4">Прикол (Эпилепсия варнинг)</label>
             </div>
             <div style="margin-bottom: 10px;">
                 <input type="checkbox" id="a3">
@@ -63,7 +66,7 @@
                 body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
             }
 
-            setTimeout(lol, 50);
+            setTimeout(lol, 100);
         }
 
         document.querySelector("#smex").addEventListener("click", () => {
